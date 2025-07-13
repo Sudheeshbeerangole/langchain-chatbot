@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  chatbot:
+    build: .
+
+    environment:
+      - HUGGINGFACEHUB_API_TOKEN='YOUR_TOKEN_HERE'
+
+    volumes:
+      - /home/mis/projects/langchain-chatbot/app.py:/app/app.py
+    stdin_open: true
+    tty: true
